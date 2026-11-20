@@ -8,8 +8,8 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import type { ProductInput } from './product.types';
-import { ProductsService } from './products.service';
+import type { ProductInput } from './product.types.js';
+import { ProductsService } from './products.service.js';
 
 @Controller('learn-flutter/products')
 export class LearnFlutterController {

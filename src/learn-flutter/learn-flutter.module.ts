@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { SqliteService } from '../database/sqlite.service';
-import { PushModule } from '../push/push.module';
-import { LearnFlutterController } from './learn-flutter.controller';
-import { ProductsService } from './products.service';
+import { SqliteService } from '../database/sqlite.service.js';
+import { PushModule } from '../push/push.module.js';
+import { LearnFlutterController } from './learn-flutter.controller.js';
+import { ProductsService } from './products.service.js';
 
 @Module({
   imports: [PushModule],

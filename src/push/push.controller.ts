@@ -8,7 +8,7 @@ import {
   ServiceUnavailableException,
   UnauthorizedException,
 } from '@nestjs/common';
-import { NovuService } from './novu.service';
+import { NovuService } from './novu.service.js';
 
 type RegisterDeviceBody = {
   subscriberId?: unknown;

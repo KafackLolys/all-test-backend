@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
-import { SqliteService } from '../database/sqlite.service';
-import { NovuService } from '../push/novu.service';
-import type { Product, ProductInput } from './product.types';
+import { SqliteService } from '../database/sqlite.service.js';
+import { NovuService } from '../push/novu.service.js';
+import type { Product, ProductInput } from './product.types.js';
 
 type ProductRow = {
   id: number;

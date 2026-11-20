@@ -8,8 +8,16 @@ export class SqliteService implements OnModuleDestroy {
   readonly db: DatabaseSync;
 
   constructor() {
+    const isVercel = process.env.VERCEL === '1';
+    const configuredPath = process.env.SQLITE_DATABASE_PATH;
+    const vercelPath =
+      configuredPath?.startsWith('/tmp/')
+        ? configuredPath
+        : '/tmp/learn_flutter.sqlite';
     const databasePath = resolve(
-      process.env.SQLITE_DATABASE_PATH ?? './data/learn_flutter.sqlite',
+      isVercel
+        ? vercelPath
+        : configuredPath ?? './data/learn_flutter.sqlite',
     );
     mkdirSync(dirname(databasePath), { recursive: true });
     this.db = new DatabaseSync(databasePath, { timeout: 5000 });

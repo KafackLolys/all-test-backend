@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { LearnFlutterModule } from './learn-flutter/learn-flutter.module';
+import { AppController } from './app.controller.js';
+import { AppService } from './app.service.js';
+import { LearnFlutterModule } from './learn-flutter/learn-flutter.module.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
